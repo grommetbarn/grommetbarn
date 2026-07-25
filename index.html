@@ -25,11 +25,11 @@
 {"@type":"Person","@id":"https://grommetbarn.com/#esther","name":"Esther Yoon","jobTitle":"Founder & Principal","email":"esther@grommetbarn.com","url":"https://grommetbarn.com/","worksFor":{"@id":"https://grommetbarn.com/#practice"},"sameAs":["https://www.linkedin.com/in/estherxkim/"],"knowsAbout":["Product marketing","Positioning","Pricing and packaging","Product naming","Go-to-market strategy","Enterprise software marketing","AI product marketing"],"alumniOf":[{"@type":"Organization","name":"Veeam Software"},{"@type":"Organization","name":"RingCentral"},{"@type":"Organization","name":"Zoom"},{"@type":"Organization","name":"Plantronics"}]},
 {"@type":"WebSite","@id":"https://grommetbarn.com/#site","url":"https://grommetbarn.com/","name":"Grommet Barn","publisher":{"@id":"https://grommetbarn.com/#practice"}},
 {"@type":"FAQPage","@id":"https://grommetbarn.com/#faq","mainEntity":[
-{"@type":"Question","name":"What is fractional product marketing?","acceptedAnswer":{"@type":"Answer","text":"Fractional product marketing is senior product marketing leadership brought in part-time. You get someone who has run the function before, without adding a full-time executive to headcount."}},
-{"@type":"Question","name":"Do you replace our product marketing team?","acceptedAnswer":{"@type":"Answer","text":"No. Grommet Barn works alongside teams that already exist, usually with a CMO or VP of Product Marketing. The goal is to leave the team stronger than it was."}},
-{"@type":"Question","name":"What does an engagement look like?","acceptedAnswer":{"@type":"Answer","text":"Three shapes. Advisory is a standing sounding board for you and your leads. Embedded is hands on the work for a defined stretch. Interim is senior coverage while you hire or through a leave. Many engagements move between them."}},
-{"@type":"Question","name":"What kinds of companies do you work with?","acceptedAnswer":{"@type":"Answer","text":"Mid-market and fast-growing software companies, usually mid-transition. A new category, a new buyer, a platform shift, a pricing change, or a portfolio that needs rebuilding after an acquisition."}},
-{"@type":"Question","name":"How do we start?","acceptedAnswer":{"@type":"Answer","text":"Email esther@grommetbarn.com and describe what you are working through. Early and unformed is fine."}}
+{"@type":"Question","name":"Will you get up to speed fast enough?","acceptedAnswer":{"@type":"Answer","text":"Faster than a new hire. Esther has been through enough of these transitions to know where to start and what to ignore."}},
+{"@type":"Question","name":"How is this different from an agency?","acceptedAnswer":{"@type":"Answer","text":"An agency sends deliverables from the outside. Grommet Barn works inside your team and owns the outcome, at whatever level you need, from advising on the hard calls to hands-on execution. One senior person accountable to you, not a brief handed to a pod."}},
+{"@type":"Question","name":"What happens when you leave?","acceptedAnswer":{"@type":"Answer","text":"The work is built to hold without her. By the end of an engagement, the team owns the story and the system, so she becomes a phone call rather than a dependency."}},
+{"@type":"Question","name":"Can you go deep on technical products?","acceptedAnswer":{"@type":"Answer","text":"Yes. Esther gets deep enough on the product to do the marketing herself, and works with the SMEs and technical teams in your org so the story reaches the right people in the way they actually evaluate."}},
+{"@type":"Question","name":"How do we start?","acceptedAnswer":{"@type":"Answer","text":"Email esther@grommetbarn.com with what you are working through. Early and unformed is fine."}}
 ]}]}
 </script>
 
@@ -52,7 +52,7 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
 body{background:var(--grey);color:var(--ink);font-family:var(--f);font-size:16px;font-weight:500;
-letter-spacing:-.04em;line-height:1.4;overflow-x:hidden;}
+letter-spacing:-.04em;line-height:1.4;overflow-x:hidden;max-width:100vw;}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}html{scroll-behavior:auto;}}
 a{color:inherit;text-decoration:none;}
 @media(max-width:809px){:root{--pad:20px;--R:16px;}}
@@ -148,7 +148,7 @@ opacity:.6;max-width:100%;}
 }
 
 /* modes */
-.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--g);}
+.modes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--g);}
 .mode{background:#fff;border-radius:var(--r);padding:30px;display:flex;flex-direction:column;gap:22px;min-height:280px;
 transition:transform .5s var(--ease);}
 .mode:hover{transform:translateY(-4px);}
@@ -159,7 +159,7 @@ transition:transform .5s var(--ease);}
 @media(max-width:900px){.modes{grid-template-columns:1fr;}.mode{min-height:0;gap:16px;}}
 
 /* the work */
-.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--g);}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--g);}
 .grp{display:flex;flex-direction:column;}
 .grpT{font-size:14px;letter-spacing:-.03em;opacity:.55;padding-bottom:14px;}
 .idx{border-top:1px solid var(--ink);}
@@ -169,12 +169,12 @@ transition:transform .5s var(--ease);}
 @media(max-width:1023px){.cols{grid-template-columns:1fr;gap:44px;}}
 
 /* track record */
-.tr{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--g);}
+.tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--g);}
 .trc{background:#fff;border-radius:var(--r);padding:30px;display:flex;flex-direction:column;gap:26px;min-height:290px;
 transition:transform .5s var(--ease);}
 .trc:hover{transform:translateY(-4px);}
 .trc .lgbox{height:52px;display:flex;align-items:center;}
-.trc .lgbox img{max-height:100%;max-width:180px;width:auto;height:auto;display:block;}
+.trc .lgbox img{max-height:100%;max-width:min(180px,100%);width:auto;height:auto;display:block;object-fit:contain;}
 .trc .rule{height:1px;background:var(--line);}
 .trc p{font-size:clamp(16px,1.75vw,19px);letter-spacing:-.04em;line-height:1.34;margin-top:auto;}
 @media(max-width:900px){.tr{grid-template-columns:1fr;}.trc{min-height:0;gap:20px;}}
@@ -242,7 +242,7 @@ font-size:14px;letter-spacing:-.04em;}
 
 <nav>
   <div class="lg">Grommet&nbsp;Barn</div>
-  <div class="desc">Hands-on product marketing leadership for what the AI era is throwing at you</div>
+  <div class="desc">Fractional Product Marketing Leadership for AI Transformation</div>
 </nav>
 
 <header class="hero">
@@ -276,12 +276,9 @@ font-size:14px;letter-spacing:-.04em;}
 <section class="sec pad" id="who">
   <div class="wrap">
     <div class="shead">
-      <div class="srow top">
-        <div class="lead"><span class="lbl"><span class="eb"><svg viewBox="0 0 17 17" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="6.4" cy="8.5" r="4.4"/><circle cx="10.6" cy="8.5" r="4.4"/></svg></span>Who I work with</span></div>
-      </div>
       <div class="srow">
         <div class="main">
-          <h2 class="rv">Experience, not extra headcount.</h2>
+          <h2 class="rv">Senior experience, however you need to staff it.</h2>
           <p class="sub rv">For CMOs and VPs of Product Marketing at mid-market and fast-growing companies who want someone who has run this before to pressure test the calls that are hard to make alone. Sometimes that's a standing advisory seat, sometimes it's hands on the work, often it moves between the two. We shape it around what you need.</p>
         </div>
       </div>
@@ -310,9 +307,6 @@ font-size:14px;letter-spacing:-.04em;}
 <section class="sec t0 pad" id="work">
   <div class="wrap">
     <div class="shead">
-      <div class="srow top">
-        <div class="lead"><span class="lbl"><span class="eb"><svg viewBox="0 0 17 17" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2.2" y="2.2" width="5.4" height="5.4" rx="1.2"/><rect x="9.4" y="2.2" width="5.4" height="5.4" rx="1.2"/><rect x="2.2" y="9.4" width="5.4" height="5.4" rx="1.2"/><rect x="9.4" y="9.4" width="5.4" height="5.4" rx="1.2" fill="currentColor" stroke="none"/></svg></span>The work</span></div>
-      </div>
       <div class="srow">
         <div class="main">
           <h2 class="rv">The hard parts I'd love to help with.</h2>
@@ -357,9 +351,6 @@ font-size:14px;letter-spacing:-.04em;}
 <section class="sec t0 pad" id="track">
   <div class="wrap">
     <div class="shead">
-      <div class="srow top">
-        <div class="lead"><span class="lbl"><span class="eb"><svg viewBox="0 0 17 17" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M2.6 13.4v-3.2M7 13.4V7M11.4 13.4V4.2M15 13.4V2"/></svg></span>Track record</span></div>
-      </div>
       <div class="srow">
         <div class="main">
           <h2 class="rv">Where I've led product marketing.</h2>
@@ -391,9 +382,6 @@ font-size:14px;letter-spacing:-.04em;}
 <section class="sec t0 pad" id="range">
   <div class="wrap">
     <div class="shead">
-      <div class="srow top">
-        <div class="lead"><span class="lbl"><span class="eb"><svg viewBox="0 0 17 17" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M1.8 8.5h13.4M1.8 5.4v6.2M15.2 5.4v6.2"/></svg></span>Range</span></div>
-      </div>
       <div class="srow">
         <div class="main">
           <h2 class="rv">Fluent with technical buyers.</h2>
@@ -427,9 +415,6 @@ font-size:14px;letter-spacing:-.04em;}
 <section class="sec t0 pad" id="faq">
   <div class="wrap">
     <div class="shead">
-      <div class="srow top">
-        <div class="lead"><span class="lbl"><span class="eb"><svg viewBox="0 0 17 17" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M5.6 6.1a2.9 2.9 0 1 1 3.6 2.8v1.6"/><circle cx="9.2" cy="13.2" r="1" fill="currentColor" stroke="none"/></svg></span>Questions</span></div>
-      </div>
       <div class="srow">
         <div class="main">
           <h2 class="rv">The usual questions.</h2>
@@ -437,16 +422,16 @@ font-size:14px;letter-spacing:-.04em;}
       </div>
     </div>
     <div class="faq">
-      <div class="fq rv"><h3>What is fractional product marketing?</h3>
-        <p>Senior product marketing leadership brought in part-time. You get someone who has run the function before, without adding a full-time executive to headcount.</p></div>
-      <div class="fq rv"><h3>Do you replace our product marketing team?</h3>
-        <p>No. I work alongside teams that already exist, usually with a CMO or VP of Product Marketing. The goal is to leave the team stronger than it was.</p></div>
-      <div class="fq rv"><h3>What does an engagement look like?</h3>
-        <p>Three shapes. Advisory is a standing sounding board for you and your leads. Embedded is hands on the work for a defined stretch. Interim is senior coverage while you hire or through a leave. Many engagements move between them.</p></div>
-      <div class="fq rv"><h3>What kinds of companies do you work with?</h3>
-        <p>Mid-market and fast-growing software companies, usually mid-transition. A new category, a new buyer, a platform shift, a pricing change, or a portfolio that needs rebuilding after an acquisition.</p></div>
+      <div class="fq rv"><h3>Will you get up to speed fast enough?</h3>
+        <p>Faster than a new hire. I've been through enough of these to know where to start and what to ignore.</p></div>
+      <div class="fq rv"><h3>How is this different from an agency?</h3>
+        <p>An agency sends you deliverables. I work inside your team and own the outcome, at whatever level you need. Some weeks that's advising you and your leads on the hard calls; other weeks it's hands on the work myself. One senior person accountable to you, not a brief handed to a pod.</p></div>
+      <div class="fq rv"><h3>What happens when you leave?</h3>
+        <p>I work myself out of the job. By the end, your team owns the story and the system, and I'm a phone call, not a dependency.</p></div>
+      <div class="fq rv"><h3>Can you go deep on technical products?</h3>
+        <p>Yes. I can get deep enough on the product to do the marketing myself, and I know how to work with the SMEs and technical teams in your org, so the story reaches the right people in the way they actually evaluate.</p></div>
       <div class="fq rv"><h3>How do we start?</h3>
-        <p>Email me and describe what you're working through. Early and unformed is fine, and that first conversation is usually short.</p></div>
+        <p>Email me with what you're working through. Early and unformed is fine.</p></div>
     </div>
   </div>
 </section>
